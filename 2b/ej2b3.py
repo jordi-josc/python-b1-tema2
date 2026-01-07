@@ -47,10 +47,17 @@ Exemple:
 """
 
 
-def triangle_area_calculate(
-    base, height):
-    # Write here your code
-    pass
+def triangle_area_calculate(base, height):
+    # Inicialitzem la variable àrea
+    area = 0
+    # Comprovem que no siguin negatius els numeros
+    if base <= 0 or height <= 0:
+        raise ValueError("Els numeros son negatius")
+    else:
+        # Calculem l'àrea del triangle
+        area = (base * height) / 2
+    # Retornem el valor d'àrea calculat correctament
+    return area        
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta
@@ -59,4 +66,4 @@ def triangle_area_calculate(
 # Si vols provar el teu codi, descomenta les línies següents i executa
 # l'scrip
 
-# print(triangle_area_calculate(33, 45))
+print(triangle_area_calculate(33, 45))
